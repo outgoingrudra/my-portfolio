@@ -187,18 +187,17 @@ export const fullStackProjects = [
     description: "A comprehensive blogging platform where users can write, view, and comment on blogs. Features AI integration for content assistance and smart recommendations. Built with the MERN stack for a seamless full-stack experience with real-time interactions.",
     type: "fullstack",
     tech: ["MongoDB", "Express", "React", "Node.js", "AI Integration"],
-    image: "/src/assets/projects/blogapp.png",
+    image: "blogapp.png",
     github: "https://github.com/outgoingrudra/Blog-site",
     live: "https://blog-site-gn4w.vercel.app/"
-  }
-  ,
-    {
-    id: 1,
-    title: "AI Chat App ",
+  },
+  {
+    id: 2,
+    title: "AI Chat App",
     description: "Rudra AI Chat App A sleek, responsive AI chatbot web app built with React. It features a modern dark/light theme toggle, sidebar navigation, and secure environment variable handling for API integration. Deployed using Vercel.",
     type: "fullstack",
     tech: ["MongoDB", "Express", "React", "Node.js", "AI Integration"],
-    image: "/src/assets/projects/rudra_ai.png",
+    image: "rudra_ai.png",
     github: "https://github.com/outgoingrudra/Rudra-AI",
     live: "https://rudra-ai-ten.vercel.app/"
   }
@@ -213,30 +212,27 @@ export const dataScienceProjects = [
     description: "Google Trends Search Analysis - A Python project that uses the Pytrends API to visualize search interest for any keyword over the past 12 months. It fetches real-time data from Google Trends and displays it using matplotlib, allowing quick insights into public interest patterns.",
     type: "datascience",
     tech: ["Python", "Pandas", "Matplotlib", "Seaborn"],
-    image: "/src/assets/projects/google_data_analysis.png",
+    image: "google_data_analysis.png",
     github: "https://github.com/outgoingrudra/Google-Data-Analysis",
     live: null
   },
-
-   {
+  {
     id: 2,
     title: "Zomato Data Analysis",
     description: "Zomato Data Analysis project using Python and Pandas. Exploratory Data Analysis (EDA), data cleaning, and visual insights on restaurant trends from Zomato's dataset.",
     type: "datascience",
     tech: ["Python", "Pandas", "Matplotlib", "Seaborn"],
-    image: "/src/assets/projects/zomato_data_analysis.png",
+    image: "zomato_data_analysis.png",
     github: "https://github.com/outgoingrudra/Zomato-Data-Analysis",
     live: null
-  } 
-  ,
-
-   {
+  },
+  {
     id: 3,
     title: "Airbnb Data Analysis",
     description: "This project explores Airbnb listing data using Python to uncover insights into pricing, availability, and location patterns.",
     type: "datascience",
     tech: ["Python", "Pandas", "Matplotlib", "Seaborn"],
-    image: "/src/assets/projects/airbnb_data_analysis.png",
+    image: "airbnb_data_analysis.png",
     github: "https://github.com/outgoingrudra/AirBnb-Data-Analysis",
     live: null
   }
