@@ -30,7 +30,7 @@ const ProjectCard = ({ project, index }) => {
         <motion.img
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.5 }}
-          src={`/public/projects/${project.image}`}
+          src={`/projects/${project.image}`}
           alt={project.title}
           className="w-full h-full object-cover"
         />
