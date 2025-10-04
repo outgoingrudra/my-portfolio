@@ -109,7 +109,7 @@ export const certificates = [
     title: "Machine Learning",
     issuer: "Infosys Springboard",
     date: "May 2025",
-    image: "/src/assets/certificates/machine-learning.jpg",
+    image: "certificate/ml.png",
     description: "Comprehensive training in machine learning algorithms, model building, and real-world applications. Covered supervised and unsupervised learning techniques with hands-on projects."
   },
   {
@@ -117,7 +117,7 @@ export const certificates = [
     title: "Data Science",
     issuer: "Infosys Springboard",
     date: "May 2025",
-    image: "/src/assets/certificates/data-science.jpg",
+    image: "certificate/ds.png",
     description: "In-depth exploration of data science fundamentals including data analysis, visualization, statistical modeling, and data-driven decision making using Python and its libraries."
   },
   {
@@ -125,7 +125,7 @@ export const certificates = [
     title: "React",
     issuer: "Ardent Infotech",
     date: "May 2025",
-    image: "/src/assets/certificates/react.jpg",
+    image: "certificate/react.jpg",
     description: "Advanced React development covering modern hooks, state management, component architecture, and building scalable single-page applications with best practices."
   },
   {
@@ -133,7 +133,7 @@ export const certificates = [
     title: "Design and Analysis of Algorithms",
     issuer: "NPTEL (IIT Madras)",
     date: "April 2025",
-    image: "/src/assets/certificates/design-and-analysis-of-algorithms.jpg",
+    image: "certificate/daa.jpg",
     description: "Comprehensive study of algorithm design techniques, complexity analysis, sorting algorithms, graph algorithms, dynamic programming, and greedy algorithms."
   },
   {
@@ -141,7 +141,7 @@ export const certificates = [
     title: "Programming in Modern C++",
     issuer: "NPTEL (IIT Kharagpur)",
     date: "November 2024",
-    image: "/src/assets/certificates/programming-in-modern-cpp.jpg",
+    image: "certificate/cpp.jpg",
     description: "Mastered modern C++ programming concepts including object-oriented programming, STL, templates, smart pointers, and advanced C++11/14/17 features."
   }
 ];
