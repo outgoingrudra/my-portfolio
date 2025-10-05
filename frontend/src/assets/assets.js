@@ -193,6 +193,16 @@ export const fullStackProjects = [
   },
   {
     id: 2,
+    title: "Car Rental Platform",
+    description: "A modern car rental platform that allows users to browse and rent vehicles based on their location and desired duration. Users can select pickup and drop-off dates, view available cars in their area, and complete bookings seamlessly. Built with a responsive design for easy access on any device.",
+    type: "fullstack",
+    tech: ["MongoDB", "Express", "React", "Node.js", "Location API"],
+    image: "car_rental.png",
+    github: "https://github.com/outgoingrudra/Car",
+    live: "https://carrental-gilt.vercel.app/"
+  },
+  {
+    id: 3,
     title: "AI Chat App",
     description: "Rudra AI Chat App A sleek, responsive AI chatbot web app built with React. It features a modern dark/light theme toggle, sidebar navigation, and secure environment variable handling for API integration. Deployed using Vercel.",
     type: "fullstack",
