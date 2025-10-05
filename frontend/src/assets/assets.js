@@ -51,7 +51,8 @@ export const skills = {
     { name: "Pandas", level: 80 },
     { name: "NumPy", level: 80 },
     { name: "Scikit-learn", level: 75 },
-    { name: "Matplotlib", level: 75 }
+    { name: "Matplotlib", level: 75 },
+    { name: "Power BI", level: 75 }
   ],
   
   tools: [
@@ -221,7 +222,7 @@ export const dataScienceProjects = [
     title: "Google Data Analytics",
     description: "Google Trends Search Analysis - A Python project that uses the Pytrends API to visualize search interest for any keyword over the past 12 months. It fetches real-time data from Google Trends and displays it using matplotlib, allowing quick insights into public interest patterns.",
     type: "datascience",
-    tech: ["Python", "Pandas", "Matplotlib", "Seaborn"],
+    tech: ["Pandas", "Matplotlib", "Seaborn","Pytrends"],
     image: "google_data_analysis.png",
     github: "https://github.com/outgoingrudra/Google-Data-Analysis",
     live: null
