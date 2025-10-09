@@ -59,14 +59,15 @@ const Certificates = () => {
           
           <div className="bg-slate-900/50 backdrop-blur-sm border border-green-500/20 rounded-xl p-6 text-center">
             <h3 className="text-4xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2">
-              {certificates.filter(c => c.issuer.includes('Infosys')).length}
+              {/* {certificates.filter(c => c.issuer.includes('Infosys')).length} */}
+              {certificates.length - certificates.filter(c => c.issuer.includes('NPTEL')).length}
             </h3>
-            <p className="text-gray-400 text-sm">Infosys Springboard</p>
+            <p className="text-gray-400 text-sm">Others</p>
           </div>
           
           <div className="bg-slate-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 text-center">
             <h3 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
-              {new Date().getFullYear() - 2024}+
+              {new Date().getFullYear() - 2023}+
             </h3>
             <p className="text-gray-400 text-sm">Years Learning</p>
           </div>
