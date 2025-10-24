@@ -82,7 +82,7 @@ export const experience = [
   {
     role: "Full Stack Developer",
     company: "Freelance",
-    duration: "2023 - Present",
+    duration: "2025 - Present",
     description: "Building responsive web applications using React, Node.js, and modern tech stack",
     achievements: [
       "Developed multiple client projects",
