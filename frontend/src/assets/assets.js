@@ -126,7 +126,7 @@ export const certificates = [
     title: "React",
     issuer: "Ardent Infotech",
     date: "May 2025",
-    image: "certificate/react.jpg",
+    image: "certificate/React.png",
     description: "Advanced React development covering modern hooks, state management, component architecture, and building scalable single-page applications with best practices."
   },
   {
