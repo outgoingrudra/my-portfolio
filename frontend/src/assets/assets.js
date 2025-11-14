@@ -181,6 +181,7 @@ export const siteMetadata = {
 
 
 // Full Stack Projects
+// Full Stack Projects
 export const fullStackProjects = [
   {
     id: 1,
@@ -211,8 +212,18 @@ export const fullStackProjects = [
     image: "rudra_ai.png",
     github: "https://github.com/outgoingrudra/Rudra-AI",
     live: "https://rudra-ai-ten.vercel.app/"
+  },
+  {
+    id: 4,
+    title: "Pizza Palace(only Frontend)",
+    description: "A vibrant and modern landing page for a pizza delivery restaurant. Features an eye-catching hero section with fresh pizza imagery, smooth animations, and a clean UI showcasing delivery stats including 500+ happy customers, 30-minute delivery time, and 4.9-star rating. Includes call-to-action buttons for ordering and viewing deals.",
+    type: "fullstack",
+    tech: ["React", "CSS", "Responsive Design"],
+    image: "pizza_palace.png",
+    github: "https://github.com/outgoingrudra/pizza",
+    live: "https://pizza-psi-lemon.vercel.app/"
   }
-  // Add more Full Stack projects here
+  // Add more projects here
 ];
 
 // Data Science Projects
