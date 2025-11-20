@@ -85,7 +85,7 @@ const Certificates = () => {
           </div>
           <div>
             <h2 className="text-3xl font-bold text-white">All Certifications</h2>
-            <p className="text-gray-400">Chronologically ordered - Most recent first</p>
+           
           </div>
         </motion.div>
 

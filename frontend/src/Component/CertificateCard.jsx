@@ -25,23 +25,31 @@ const CertificateCard = ({ certificate, index }) => {
       </div>
 
       {/* Certificate Image */}
-      <div className="relative h-56 overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900">
-        <motion.img
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.6 }}
-          src={certificate.image}
-          alt={certificate.title}
-          className="w-full h-full object-cover"
-        />
-        
-        {/* Gold Ribbon Effect */}
-        <div className="absolute top-4 -left-12 rotate-45 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 px-12 py-1 shadow-lg">
-          <FaAward className="text-white text-sm mx-auto" />
-        </div>
+<a 
+  href={certificate.image} 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="block"
+>
+  <div className="relative h-56 overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900">
+    <motion.img
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.6 }}
+      src={certificate.image}
+      alt={certificate.title}
+      className="w-full h-full object-cover cursor-pointer"
+    />
 
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
-      </div>
+    {/* Gold Ribbon Effect */}
+    <div className="absolute top-4 -left-12 rotate-45 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 px-12 py-1 shadow-lg">
+      <FaAward className="text-white text-sm mx-auto" />
+    </div>
+
+    {/* Gradient Overlay */}
+    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
+  </div>
+</a>
+
 
       {/* Content Section */}
       <div className="relative p-6 space-y-4">

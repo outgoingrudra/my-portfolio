@@ -107,6 +107,30 @@ export const interests = [
 export const certificates = [
   {
     id: 1,
+    title: "Design and Analysis of Algorithms",
+    issuer: "NPTEL (IIT Madras  • Top 5%)",
+    date: "April 2025",
+    image: "certificate/daa.jpg",
+    description: "Comprehensive study of algorithm design techniques, complexity analysis, sorting algorithms, graph algorithms, dynamic programming, and greedy algorithms. Secured a Top 5% ranking, demonstrating strong analytical and algorithmic skills."
+  },
+  {
+    id: 2,
+    title: "Programming in Modern C++",
+    issuer: "NPTEL (IIT Kharagpur)",
+    date: "November 2024",
+    image: "certificate/cpp.jpg",
+    description: "Mastered modern C++ programming concepts including object-oriented programming, STL, templates, smart pointers, and advanced C++11/14/17 features. Successfully completed under IIT Kharagpur through NPTEL."
+  },
+  {
+    id: 3,
+    title: "Software Engineering",
+    issuer: "NPTEL (IIT Kharagpur • Silver Badge • Top 1%)",
+    date: "November 2025",
+    image: "certificate/software_engineering.jpg",
+    description: "Covered SDLC models, requirement analysis, software design methodologies, testing techniques, project management, and software quality assurance. Earned a Silver Badge and ranked in the Top 1% under IIT Kharagpur (NPTEL)."
+  },
+  {
+    id: 4,
     title: "Machine Learning",
     issuer: "Infosys Springboard",
     date: "May 2025",
@@ -114,7 +138,7 @@ export const certificates = [
     description: "Comprehensive training in machine learning algorithms, model building, and real-world applications. Covered supervised and unsupervised learning techniques with hands-on projects."
   },
   {
-    id: 2,
+    id: 5,
     title: "Data Science",
     issuer: "Infosys Springboard",
     date: "May 2025",
@@ -122,28 +146,12 @@ export const certificates = [
     description: "In-depth exploration of data science fundamentals including data analysis, visualization, statistical modeling, and data-driven decision making using Python and its libraries."
   },
   {
-    id: 3,
+    id: 6,
     title: "React",
     issuer: "Ardent Infotech",
     date: "May 2025",
     image: "certificate/React.png",
     description: "Advanced React development covering modern hooks, state management, component architecture, and building scalable single-page applications with best practices."
-  },
-  {
-    id: 4,
-    title: "Design and Analysis of Algorithms",
-    issuer: "NPTEL (IIT Madras)",
-    date: "April 2025",
-    image: "certificate/daa.jpg",
-    description: "Comprehensive study of algorithm design techniques, complexity analysis, sorting algorithms, graph algorithms, dynamic programming, and greedy algorithms."
-  },
-  {
-    id: 5,
-    title: "Programming in Modern C++",
-    issuer: "NPTEL (IIT Kharagpur)",
-    date: "November 2024",
-    image: "certificate/cpp.jpg",
-    description: "Mastered modern C++ programming concepts including object-oriented programming, STL, templates, smart pointers, and advanced C++11/14/17 features."
   }
 ];
 
