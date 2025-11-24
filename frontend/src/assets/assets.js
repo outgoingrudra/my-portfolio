@@ -60,7 +60,9 @@ export const skills = {
     { name: "VS Code", level: 95 },
     { name: "Postman", level: 85 },
     { name: "Jupyter", level: 85 },
-    { name: "Intellij", level: 85 }
+    { name: "Intellij", level: 85 },
+    { name: "Prismic" , level : 75},
+    { name: "WebStorm" , level : 75},
   ]
 };
 
@@ -107,14 +109,30 @@ export const interests = [
 export const certificates = [
   {
     id: 1,
+    title: "Programming in Java",
+    issuer: "NPTEL (IIT Kharagpur • Gold Badge • Top 1%)",
+    date: "November 2025",
+    image: "certificate/java.jpg",
+    description: "Extensive Java programming course covering core concepts, object-oriented principles, exception handling, multithreading, collections framework, and GUI development. Achieved a Gold Badge and secured Top 1% ranking, demonstrating exceptional programming proficiency under IIT Kharagpur (NPTEL)."
+  },
+  {
+    id: 2,
+    title: "Software Engineering",
+    issuer: "NPTEL (IIT Kharagpur • Silver Badge • Top 1%)",
+    date: "November 2025",
+    image: "certificate/software_engineering.jpg",
+    description: "Comprehensive coverage of software development lifecycle, agile methodologies, requirements engineering, system design patterns, software testing strategies, version control, and quality assurance practices. Earned Silver Badge with Top 1% ranking, showcasing strong understanding of professional software development principles."
+  },
+  {
+    id: 3,
     title: "Design and Analysis of Algorithms",
-    issuer: "NPTEL (IIT Madras  • Top 5%)",
+    issuer: "NPTEL (IIT Madras • Top 5%)",
     date: "April 2025",
     image: "certificate/daa.jpg",
     description: "Comprehensive study of algorithm design techniques, complexity analysis, sorting algorithms, graph algorithms, dynamic programming, and greedy algorithms. Secured a Top 5% ranking, demonstrating strong analytical and algorithmic skills."
   },
   {
-    id: 2,
+    id: 4,
     title: "Programming in Modern C++",
     issuer: "NPTEL (IIT Kharagpur)",
     date: "November 2024",
@@ -122,15 +140,7 @@ export const certificates = [
     description: "Mastered modern C++ programming concepts including object-oriented programming, STL, templates, smart pointers, and advanced C++11/14/17 features. Successfully completed under IIT Kharagpur through NPTEL."
   },
   {
-    id: 3,
-    title: "Software Engineering",
-    issuer: "NPTEL (IIT Kharagpur • Silver Badge • Top 1%)",
-    date: "November 2025",
-    image: "certificate/software_engineering.jpg",
-    description: "Covered SDLC models, requirement analysis, software design methodologies, testing techniques, project management, and software quality assurance. Earned a Silver Badge and ranked in the Top 1% under IIT Kharagpur (NPTEL)."
-  },
-  {
-    id: 4,
+    id: 5,
     title: "Machine Learning",
     issuer: "Infosys Springboard",
     date: "May 2025",
@@ -138,7 +148,7 @@ export const certificates = [
     description: "Comprehensive training in machine learning algorithms, model building, and real-world applications. Covered supervised and unsupervised learning techniques with hands-on projects."
   },
   {
-    id: 5,
+    id: 6,
     title: "Data Science",
     issuer: "Infosys Springboard",
     date: "May 2025",
@@ -146,7 +156,7 @@ export const certificates = [
     description: "In-depth exploration of data science fundamentals including data analysis, visualization, statistical modeling, and data-driven decision making using Python and its libraries."
   },
   {
-    id: 6,
+    id: 7,
     title: "React",
     issuer: "Ardent Infotech",
     date: "May 2025",
@@ -154,7 +164,6 @@ export const certificates = [
     description: "Advanced React development covering modern hooks, state management, component architecture, and building scalable single-page applications with best practices."
   }
 ];
-
 
 // Social Media Links
 export const socialLinks = [
