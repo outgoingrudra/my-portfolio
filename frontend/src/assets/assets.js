@@ -30,13 +30,15 @@ export const skills = {
     { name: "Next.js", level: 85 },
     { name: "JavaScript", level: 90 },
     { name: "HTML/CSS", level: 95 },
-    { name: "Tailwind CSS", level: 90 }
+    { name: "Tailwind CSS", level: 90 },
+    { name: "Bootstrap", level: 85 },
   ],
   
   backend: [
     { name: "Node.js", level: 85 },
     { name: "Express", level: 85 },
-    { name: "Spring Boot", level: 75 }
+    { name: "Spring Boot", level: 75 },
+    { name: "PHP", level: 70 },
   ],
   
   database: [
@@ -74,7 +76,7 @@ export const education = [
     location: "Kolkata, India",
     duration: "2023 - 2027",
     grade: "8.86 CGPA", // Update with your actual grade
-    description: "Specialization in Web Development and Data Science"
+    description: "Specialization in Artifical Intelligence and Machine Learning"
   }
   // Add more education entries if needed
 ];

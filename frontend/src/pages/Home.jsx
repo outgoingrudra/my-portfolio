@@ -122,7 +122,7 @@ const Home = () => {
             {/* Image Container */}
             <div className="relative z-10 rounded-full overflow-hidden border-4 border-blue-500/30 shadow-2xl shadow-blue-500/20 hover:border-blue-400/50 transition-all duration-300">
               <img
-                src="MyImg.jpg"
+                src="myimg.jpeg"
                 alt="Your Name"
                 className="w-full h-full object-cover aspect-square"
               />
