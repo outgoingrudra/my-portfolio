@@ -67,7 +67,7 @@ const Home = () => {
               View Projects
             </Link>
             <a
-              href="/resume.pdf"
+              href="/my_resume.pdf"
               download
               className="px-8 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 hover:scale-105 transition-all duration-300 flex items-center gap-2"
             >

@@ -17,7 +17,7 @@ export const personalInfo = {
   github: "https://github.com/outgoingrudra",
   linkedin: "https://linkedin.com/in/rudra-verma-33258a2a3",
   
-  resumeLink: "/resume.pdf", // Add your resume to public folder
+  resumeLink: "/my_resume.pdf", // Add your resume to public folder
   
   availability: "Open to Opportunities",
   lookingFor: "Software Engineer Roles | Internships"
@@ -37,7 +37,6 @@ export const skills = {
   backend: [
     { name: "Node.js", level: 85 },
     { name: "Express", level: 85 },
-    { name: "Spring Boot", level: 75 },
     { name: "PHP", level: 70 },
   ],
   
@@ -220,7 +219,7 @@ export const fullStackProjects = [
     tech: ["MongoDB", "Express", "React", "Node.js", "Location API"],
     image: "car_rental.png",
     github: "https://github.com/outgoingrudra/Car",
-    live: "https://carrental-gilt.vercel.app/"
+    live: "https://car-rental-zeta-hazel.vercel.app/"
   },
   {
     id: 3,
