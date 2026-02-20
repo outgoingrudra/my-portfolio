@@ -203,6 +203,16 @@ export const siteMetadata = {
 export const fullStackProjects = [
   {
     id: 1,
+    title: "Talent IQ - Collaborative Interview Platform",
+    description: "A powerful real-time interview platform that transforms technical hiring. Candidates and interviewers can collaborate face-to-face with HD video calls, write and execute code together in a shared editor, and communicate via integrated chat - all in one seamless interface. Built with modern authentication and real-time sync for an experience that feels like being in the same room. Perfect for remote technical interviews, pair programming sessions, and coding assessments.",
+    type: "fullstack",
+    tech: ["MongoDB", "Express", "React", "Node.js","Stream", "Clerk", "Inngest", "Framer Motion"],
+    image: "interview_platform.png",
+    github: "https://github.com/outgoingrudra/ip",
+    live: "https://ip-slfp.onrender.com/"
+  },
+  {
+    id: 2,
     title: "Blog Website",
     description: "A comprehensive blogging platform where users can write, view, and comment on blogs. Features AI integration for content assistance and smart recommendations. Built with the MERN stack for a seamless full-stack experience with real-time interactions.",
     type: "fullstack",
@@ -212,7 +222,7 @@ export const fullStackProjects = [
     live: "https://blog-site-gn4w.vercel.app/"
   },
   {
-    id: 2,
+    id: 3,
     title: "Car Rental Platform",
     description: "A modern car rental platform that allows users to browse and rent vehicles based on their location and desired duration. Users can select pickup and drop-off dates, view available cars in their area, and complete bookings seamlessly. Built with a responsive design for easy access on any device.",
     type: "fullstack",
@@ -222,7 +232,7 @@ export const fullStackProjects = [
     live: "https://car-rental-zeta-hazel.vercel.app/"
   },
   {
-    id: 3,
+    id: 4,
     title: "AI Chat App",
     description: "Rudra AI Chat App A sleek, responsive AI chatbot web app built with React. It features a modern dark/light theme toggle, sidebar navigation, and secure environment variable handling for API integration. Deployed using Vercel.",
     type: "fullstack",
@@ -232,8 +242,8 @@ export const fullStackProjects = [
     live: "https://rudra-ai-ten.vercel.app/"
   },
   {
-    id: 4,
-    title: "Pizza Palace(only Frontend)",
+    id: 5,
+    title: "Pizza Palace (Frontend)",
     description: "A vibrant and modern landing page for a pizza delivery restaurant. Features an eye-catching hero section with fresh pizza imagery, smooth animations, and a clean UI showcasing delivery stats including 500+ happy customers, 30-minute delivery time, and 4.9-star rating. Includes call-to-action buttons for ordering and viewing deals.",
     type: "fullstack",
     tech: ["React", "CSS", "Responsive Design"],
@@ -241,9 +251,7 @@ export const fullStackProjects = [
     github: "https://github.com/outgoingrudra/pizza",
     live: "https://pizza-psi-lemon.vercel.app/"
   }
-  // Add more projects here
 ];
-
 // Data Science Projects
 export const dataScienceProjects = [
   {
