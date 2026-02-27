@@ -1,112 +1,208 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaAward, FaCalendar, FaUniversity } from 'react-icons/fa';
+import { FaAward, FaCalendar, FaUniversity, FaExternalLinkAlt } from 'react-icons/fa';
+import { HiCheckBadge } from 'react-icons/hi2';
 
 const CertificateCard = ({ certificate, index }) => {
-  
+  const [hovered, setHovered] = useState(false);
+
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      whileHover={{ y: -8, scale: 1.02 }}
-      className="group relative bg-slate-900/50 backdrop-blur-sm border border-blue-500/20 rounded-2xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 shadow-xl shadow-blue-500/10 hover:shadow-blue-500/30"
+      initial={{ opacity: 0, y: 36 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-50px' }}
+      transition={{ duration: 0.6, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        position: 'relative',
+        borderRadius: 14,
+        overflow: 'hidden',
+        background: 'rgba(255,255,255,0.03)',
+        border: `1px solid ${hovered ? 'rgba(234,179,8,0.35)' : 'rgba(255,255,255,0.07)'}`,
+        boxShadow: hovered
+          ? '0 24px 60px rgba(0,0,0,0.55), 0 0 0 1px rgba(234,179,8,0.08)'
+          : '0 4px 20px rgba(0,0,0,0.3)',
+        transform: hovered ? 'translateY(-7px)' : 'translateY(0)',
+        transition: 'border-color 0.35s, box-shadow 0.35s, transform 0.35s',
+        display: 'flex',
+        flexDirection: 'column',
+      }}
     >
-      {/* Glitter Background Effect */}
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-        <div className="absolute top-0 left-1/4 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-40 h-40 bg-cyan-500/20 rounded-full blur-2xl animate-pulse delay-300" />
-        <div className="absolute top-1/2 right-1/3 w-24 h-24 bg-purple-500/20 rounded-full blur-2xl animate-pulse delay-500" />
-      </div>
 
-      {/* Shimmer Effect */}
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
-        <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1500 bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12" />
-      </div>
+      {/* ── IMAGE ── */}
+      <a
+        href={certificate.image}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ display: 'block', textDecoration: 'none', flexShrink: 0 }}
+      >
+        <div style={{ position: 'relative', height: 200, overflow: 'hidden' }}>
+          <img
+            src={certificate.image}
+            alt={certificate.title}
+            style={{
+              width: '100%', height: '100%', objectFit: 'cover', display: 'block',
+              transform: hovered ? 'scale(1.07)' : 'scale(1)',
+              transition: 'transform 0.55s ease',
+            }}
+            onError={e => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
+          />
 
-      {/* Certificate Image */}
-<a 
-  href={certificate.image} 
-  target="_blank" 
-  rel="noopener noreferrer"
-  className="block"
->
-  <div className="relative h-56 overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900">
-    <motion.img
-      whileHover={{ scale: 1.05 }}
-      transition={{ duration: 0.6 }}
-      src={certificate.image}
-      alt={certificate.title}
-      className="w-full h-full object-cover cursor-pointer"
-    />
+          {/* Fallback */}
+          <div style={{
+            display: 'none', position: 'absolute', inset: 0,
+            background: 'linear-gradient(135deg,rgba(234,179,8,0.08),rgba(15,23,42,0.95))',
+            alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 10,
+          }}>
+            <FaAward size={40} style={{ color: 'rgba(234,179,8,0.35)' }} />
+            <span style={{ fontSize: '0.7rem', color: 'rgba(234,179,8,0.4)', letterSpacing: '0.12em', textTransform: 'uppercase' }}>
+              Certificate
+            </span>
+          </div>
 
-    {/* Gold Ribbon Effect */}
-    <div className="absolute top-4 -left-12 rotate-45 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 px-12 py-1 shadow-lg">
-      <FaAward className="text-white text-sm mx-auto" />
-    </div>
+          {/* Gradient overlay */}
+          <div style={{
+            position: 'absolute', inset: 0,
+            background: 'linear-gradient(180deg,transparent 30%,rgba(4,7,15,0.9) 100%)',
+            opacity: hovered ? 1 : 0.65,
+            transition: 'opacity 0.35s',
+          }} />
 
-    {/* Gradient Overlay */}
-    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
-  </div>
-</a>
+          {/* View full badge — appears on hover */}
+          <div style={{
+            position: 'absolute', top: 12, right: 12,
+            display: 'flex', alignItems: 'center', gap: 5,
+            padding: '0.3rem 0.75rem',
+            borderRadius: 6,
+            background: 'rgba(4,7,15,0.85)',
+            border: '1px solid rgba(234,179,8,0.3)',
+            backdropFilter: 'blur(8px)',
+            opacity: hovered ? 1 : 0,
+            transform: hovered ? 'translateY(0)' : 'translateY(-8px)',
+            transition: 'opacity 0.3s, transform 0.3s',
+          }}>
+            <FaExternalLinkAlt size={9} style={{ color: '#fde047' }} />
+            <span style={{ fontSize: '0.65rem', fontWeight: 700, color: '#fde047', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+              View
+            </span>
+          </div>
 
+          {/* Gold award ribbon — top left */}
+          <div style={{
+            position: 'absolute', top: 14, left: 14,
+            display: 'flex', alignItems: 'center', gap: 5,
+            padding: '0.28rem 0.7rem', borderRadius: 99,
+            background: 'rgba(234,179,8,0.12)',
+            border: '1px solid rgba(234,179,8,0.3)',
+            backdropFilter: 'blur(8px)',
+          }}>
+            <FaAward size={10} style={{ color: '#fde047' }} />
+            <span style={{ fontSize: '0.62rem', fontWeight: 700, color: '#fde047', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+              Certified
+            </span>
+          </div>
 
-      {/* Content Section */}
-      <div className="relative p-6 space-y-4">
-        
+          {/* Ghost index number */}
+          <div style={{
+            position: 'absolute', bottom: 10, left: 14,
+            fontFamily: "'Bebas Neue','Impact',sans-serif",
+            fontSize: '3.2rem', lineHeight: 1, letterSpacing: '0.03em',
+            color: 'transparent',
+            WebkitTextStroke: '1px rgba(234,179,8,0.18)',
+            userSelect: 'none',
+          }}>
+            {String(index + 1).padStart(2, '0')}
+          </div>
+        </div>
+      </a>
+
+      {/* ── CONTENT ── */}
+      <div style={{ padding: '1.2rem 1.4rem 1.5rem', display: 'flex', flexDirection: 'column', flex: 1 }}>
+
         {/* Title */}
-        <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors leading-tight">
+        <h3 style={{
+          fontSize: '0.95rem', fontWeight: 700, lineHeight: 1.35,
+          marginBottom: '0.7rem', letterSpacing: '0.01em',
+          color: hovered ? '#fde047' : '#e2e8f0',
+          transition: 'color 0.3s',
+        }}>
           {certificate.title}
         </h3>
 
         {/* Issuer */}
-        <div className="flex items-center gap-2 text-blue-400">
-          <FaUniversity size={16} />
-          <span className="font-semibold">{certificate.issuer}</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: '0.45rem' }}>
+          <FaUniversity size={12} style={{ color: '#22d3ee', flexShrink: 0 }} />
+          <span style={{ fontSize: '0.82rem', fontWeight: 600, color: '#22d3ee' }}>
+            {certificate.issuer}
+          </span>
         </div>
 
         {/* Date */}
-        <div className="flex items-center gap-2 text-gray-400">
-          <FaCalendar size={14} />
-          <span className="text-sm">{certificate.date}</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: '0.85rem' }}>
+          <FaCalendar size={11} style={{ color: 'rgba(100,116,139,0.7)', flexShrink: 0 }} />
+          <span style={{ fontSize: '0.75rem', color: 'rgba(100,116,139,0.7)' }}>
+            {certificate.date}
+          </span>
         </div>
 
         {/* Description */}
-        <p className="text-gray-400 text-sm leading-relaxed line-clamp-3">
+        <p style={{
+          fontSize: '0.78rem', color: 'rgba(148,163,184,0.6)',
+          lineHeight: 1.75, flex: 1, marginBottom: '1.1rem',
+          display: '-webkit-box', WebkitLineClamp: 3,
+          WebkitBoxOrient: 'vertical', overflow: 'hidden',
+        }}>
           {certificate.description}
         </p>
 
-        {/* Decorative Line */}
-        <div className="pt-4">
-          <motion.div
-            initial={{ width: 0 }}
-            whileInView={{ width: '100%' }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="h-0.5 bg-gradient-to-r from-blue-500 via-cyan-500 to-transparent"
-          />
-        </div>
+        {/* Bottom row */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
 
-        {/* Achievement Badge */}
-        <div className="flex items-center gap-2 pt-2">
-          <div className="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-300 text-xs font-semibold">
-            ✓ Certified
+          {/* Verified badge */}
+          <div style={{
+            display: 'inline-flex', alignItems: 'center', gap: 5,
+            padding: '0.28rem 0.75rem', borderRadius: 99,
+            background: 'rgba(234,179,8,0.07)',
+            border: '1px solid rgba(234,179,8,0.2)',
+          }}>
+            <span style={{ color: '#fde047', display: 'flex' }}>
+              <FaAward size={11} />
+            </span>
+            <span style={{ fontSize: '0.65rem', fontWeight: 700, color: '#fde047', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+              Verified
+            </span>
           </div>
-        </div>
 
+          {/* View link */}
+          <a
+            href={certificate.image}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-flex', alignItems: 'center', gap: 5,
+              fontSize: '0.72rem', fontWeight: 600, textDecoration: 'none',
+              color: 'rgba(148,163,184,0.55)',
+              transition: 'color 0.25s',
+            }}
+            onMouseEnter={e => e.currentTarget.style.color = '#fde047'}
+            onMouseLeave={e => e.currentTarget.style.color = 'rgba(148,163,184,0.55)'}
+          >
+            <FaExternalLinkAlt size={10} /> View Full
+          </a>
+        </div>
       </div>
 
-      {/* Corner Decorations */}
-      <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-blue-500/10 via-cyan-500/5 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-purple-500/10 via-blue-500/5 to-transparent rounded-tr-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-      {/* Award Icon Float Effect */}
-      <motion.div
-        animate={{ y: [0, -10, 0] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-4 right-4 p-2 bg-yellow-500/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
-      >
-        <FaAward className="text-yellow-400" size={20} />
-      </motion.div>
+      {/* Bottom glow bar on hover — gold */}
+      <div style={{
+        position: 'absolute', bottom: 0, left: 0, right: 0, height: 2,
+        background: 'linear-gradient(90deg,transparent,#eab308,#fde047,transparent)',
+        opacity: hovered ? 1 : 0,
+        transition: 'opacity 0.35s',
+      }} />
 
     </motion.div>
   );

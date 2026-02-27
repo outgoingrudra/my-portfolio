@@ -1,72 +1,101 @@
 // Personal Information
+// Personal Information
 export const personalInfo = {
   name: "Rudra Verma",
   title: "Full Stack Web Developer",
-  subtitle: "Data Science & Machine Learning Enthusiast",
-  bio: "Passionate B.Tech CSE student with a strong foundation in full-stack web development and data science. I thrive on transforming complex problems into elegant solutions through clean code and innovative thinking. Currently exploring the intersection of web technologies and artificial intelligence, with a keen interest in building scalable applications that make a real impact. My goal is to become a skilled Software Engineer at a leading tech company, continuously learning and contributing to cutting-edge projects.",
-  
+  subtitle: "MERN Stack · Learning DevOps & Spring Boot",
+  bio: "Passionate B.Tech CSE student with a strong foundation in full-stack web development using the MERN stack. I thrive on transforming complex problems into elegant, production-ready solutions through clean code and modern tooling. Currently deepening my expertise in backend architecture, cloud infrastructure, and DevOps practices — with a long-term goal of building scalable systems that make a real impact. I'm actively expanding into Spring Boot and containerization to grow into a well-rounded software engineer.",
+
   currentStatus: "3rd Year B.Tech CSE Student",
   college: "Swami Vivekananda University",
   degree: "Bachelor of Technology in Computer Science",
-  year: "2022-2026", // Update with your actual years
-  
+  year: "2022-2026",
+
   email: "vrudra671@gmail.com",
   phone: "+91 6291985921",
   location: "Kolkata, India",
-  
+
   github: "https://github.com/outgoingrudra",
   linkedin: "https://linkedin.com/in/rudra-verma-33258a2a3",
-  
-  resumeLink: "/my_resume.pdf", // Add your resume to public folder
-  
-  availability: "Open to Opportunities",
-  lookingFor: "Software Engineer Roles | Internships"
-};
 
+  resumeLink: "/my_resume.pdf",
+
+  availability: "Open to Opportunities",
+  lookingFor: "SWE Roles | Full Stack Internships",
+
+  // Stack highlights shown in UI badges / cards
+  primaryStack: ["React", "Node.js", "Express", "MongoDB"],
+  learning: ["Spring Boot", "Docker", "CI/CD", "AWS"],
+
+  // Fun facts / quick stats for About section
+  stats: [
+    { label: "Projects Built", value: "5+" },
+    { label: "Tech Stack", value: "MERN" },
+    { label: "Grad Year", value: "2027" },
+    { label: "Status", value: "Open to Work" },
+  ],
+};
 // Skills organized by categories
 export const skills = {
   frontend: [
     { name: "React", level: 90 },
+    { name: "React Native", level: 75 },
     { name: "Next.js", level: 85 },
     { name: "JavaScript", level: 90 },
+    { name: "TypeScript", level: 78 },
     { name: "HTML/CSS", level: 95 },
     { name: "Tailwind CSS", level: 90 },
+    { name: "Daisy UI", level: 80 },
     { name: "Bootstrap", level: 85 },
+    { name: "Redux", level: 80 },
+    { name: "Zustand", level: 78 },
+    { name: "TanStack Query", level: 78 },
   ],
-  
+
   backend: [
     { name: "Node.js", level: 85 },
     { name: "Express", level: 85 },
+    { name: "REST APIs", level: 88 },
+    { name: "Inngest", level: 72 },
+    { name: "Clerk", level: 78 },
     { name: "PHP", level: 70 },
   ],
-  
+
   database: [
     { name: "MongoDB", level: 80 },
     { name: "MySQL", level: 75 },
     { name: "PostgreSQL", level: 70 },
-    { name: "Radis", level: 70 },
+    { name: "Redis", level: 70 },
+    { name: "Prisma ORM", level: 75 },
   ],
-  
-  dataScience: [
-    { name: "Python", level: 85 },
-    { name: "Pandas", level: 80 },
-    { name: "NumPy", level: 80 },
-    { name: "Scikit-learn", level: 75 },
-    { name: "Matplotlib", level: 75 },
-    { name: "Power BI", level: 75 }
+
+  learning: [
+    { name: "Spring Boot", level: 40 },
+    { name: "Docker", level: 45 },
+    { name: "CI/CD", level: 40 },
+    { name: "AWS", level: 35 },
+    { name: "Kubernetes", level: 30 },
+    { name: "System Design", level: 30 },
   ],
-  
+
   tools: [
     { name: "Git/GitHub", level: 90 },
     { name: "VS Code", level: 95 },
     { name: "Postman", level: 85 },
-    { name: "Jupyter", level: 85 },
-    { name: "Intellij", level: 85 },
-    { name: "Prismic" , level : 75},
-    { name: "WebStorm" , level : 75},
-  ]
-};
+    { name: "IntelliJ", level: 85 },
+    { name: "WebStorm", level: 75 },
+    
+  
+  ],
 
+  languages: [
+    { name: "JavaScript", level: 90 },
+    { name: "TypeScript", level: 78 },
+    { name: "Python", level: 85 },
+    { name: "Java", level: 85 },
+    { name: "C/C++", level: 60 },
+  ],
+};
 // Education
 export const education = [
   {
@@ -211,18 +240,9 @@ export const fullStackProjects = [
     github: "https://github.com/outgoingrudra/ip",
     live: "https://ip-slfp.onrender.com/"
   },
+  
   {
     id: 2,
-    title: "Blog Website",
-    description: "A comprehensive blogging platform where users can write, view, and comment on blogs. Features AI integration for content assistance and smart recommendations. Built with the MERN stack for a seamless full-stack experience with real-time interactions.",
-    type: "fullstack",
-    tech: ["MongoDB", "Express", "React", "Node.js", "AI Integration"],
-    image: "blogapp.png",
-    github: "https://github.com/outgoingrudra/Blog-site",
-    live: "https://blog-site-gn4w.vercel.app/"
-  },
-  {
-    id: 3,
     title: "Car Rental Platform",
     description: "A modern car rental platform that allows users to browse and rent vehicles based on their location and desired duration. Users can select pickup and drop-off dates, view available cars in their area, and complete bookings seamlessly. Built with a responsive design for easy access on any device.",
     type: "fullstack",
@@ -230,6 +250,16 @@ export const fullStackProjects = [
     image: "car_rental.png",
     github: "https://github.com/outgoingrudra/Car",
     live: "https://car-rental-zeta-hazel.vercel.app/"
+  },
+  {
+    id: 3,
+    title: "Blog Website",
+    description: "A comprehensive blogging platform where users can write, view, and comment on blogs. Features AI integration for content assistance and smart recommendations. Built with the MERN stack for a seamless full-stack experience with real-time interactions.",
+    type: "fullstack",
+    tech: ["MongoDB", "Express", "React", "Node.js", "AI Integration"],
+    image: "blogapp.png",
+    github: "https://github.com/outgoingrudra/Blog-site",
+    live: "https://blog-site-gn4w.vercel.app/"
   },
   {
     id: 4,
