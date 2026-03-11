@@ -109,20 +109,19 @@ export const education = [
   // Add more education entries if needed
 ];
 
-// Experience (Add your internships, projects, etc.)
+// Experience
 export const experience = [
   {
-    role: "Full Stack Developer",
-    company: "Freelance",
-    duration: "2025 - Present",
-    description: "Building responsive web applications using React, Node.js, and modern tech stack",
+    role: "Frontend Developer Intern",
+    company: "Online Savaari",
+    duration: "Mar 2026 - Present",
+    description: "Working on building and optimizing modern web interfaces using Next.js. Focused on developing responsive UI components, improving page performance, and integrating frontend features with backend APIs.",
     achievements: [
-      "Developed multiple client projects",
-      "Implemented RESTful APIs",
-      "Optimized application performance"
+      "Developing scalable UI components using Next.js and modern React practices",
+      "Improving page load performance with optimized rendering techniques",
+      "Collaborating on building production-ready frontend features"
     ]
   }
-  // Add more experience entries as needed
 ];
 
 // Interests/Hobbies
